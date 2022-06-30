@@ -3,7 +3,13 @@ import './components/styles/App.css';
 import TodoList from "./components/TodoList/TodoList";
 
 
+type AppState = {
 
+}
+
+type AppProp= {
+
+}
 
 function App() {
     return (
