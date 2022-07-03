@@ -4,9 +4,7 @@ import '../styles/Todo.sass';
 import {Todos} from "../../models/Todos";
 
 
-
-// @ts-ignore
-const Todo = ({ todos, completeTodo, removeTodo }) => {
+const Todo = ( {todos, completeTodo, removeTodo }:{todos:any, completeTodo:any, removeTodo:any}) => {
 
 
     return todos.map((todo:Todos, index:number) => (

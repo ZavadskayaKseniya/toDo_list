@@ -6,7 +6,7 @@ import {Todos} from "../../models/Todos"
 
 
 function TodoList() {
-    const [todos, setTodos] = useState<object>([]);
+    const [todos, setTodos] = useState<any>([]);
 
     const addTodo = (todo:Todos) => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -24,7 +24,7 @@ function TodoList() {
 
 
     const removeTodo = (id: string) => {
-         // @ts-ignore
+
         const removedArr = [...todos].filter(todo => todo.id !== id);
 
         setTodos(removedArr);
@@ -32,7 +32,7 @@ function TodoList() {
 
 
     const completeTodo = (id: string) => {
-        // @ts-ignore
+
         let updatedTodos = todos.map((todo:Todos) => {
             if (todo.id === id) {
                 todo.isComplete = !todo.isComplete;
