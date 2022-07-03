@@ -2,18 +2,22 @@ import React, { useState,  useRef } from 'react';
 import '../styles/TodoForm.sass';
 import Button from "../Button/Button";
 
-function TodoForm(props) {
-    const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+
+
+
+function TodoForm(props:any) {
+    const [input, setInput] = useState<string | number | readonly string[] | undefined>(props.edit ? props.edit.value : '');
 
     const inputRef = useRef(null);
 
 
 
-    const handleChange = e => {
+    const handleChange = (e: any) => {
         setInput(e.target.value);
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
 
         props.onSubmit({

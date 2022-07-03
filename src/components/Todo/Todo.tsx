@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
-
 import '../styles/Todo.sass';
+import {Todos} from "../../models/Todos";
 
+
+
+// @ts-ignore
 const Todo = ({ todos, completeTodo, removeTodo }) => {
 
 
-    return todos.map((todo, index) => (
+    return todos.map((todo:Todos, index:number) => (
 
 
             <div

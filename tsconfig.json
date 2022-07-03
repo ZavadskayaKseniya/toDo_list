@@ -9,6 +9,10 @@
     ],
 
     "allowJs": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -32,7 +36,9 @@
       "@api": ["./api/Api.service.ts"],
       "@services/*": ["services/*"]
     },
-    "jsx": "react-jsx"
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "jsx": "react-jsx",
   },
   "include": [
     "src"

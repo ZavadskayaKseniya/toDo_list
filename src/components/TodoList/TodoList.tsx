@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import TodoForm from "../TodoForm/TodoForm";
 import Todo from "../Todo/Todo";
+import {Todos} from "../../models/Todos"
+
 
 
 function TodoList() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState<object>([]);
 
-    const addTodo = todo => {
+    const addTodo = (todo:Todos) => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
             return ;
         }
 
+        // @ts-ignore
         const newTodos = [todo, ...todos];
+
 
         setTodos(newTodos);
 
@@ -19,15 +23,17 @@ function TodoList() {
 
 
 
-    const removeTodo = id => {
-         const removedArr = [...todos].filter(todo => todo.id !== id);
+    const removeTodo = (id: string) => {
+         // @ts-ignore
+        const removedArr = [...todos].filter(todo => todo.id !== id);
 
         setTodos(removedArr);
     };
 
 
-    const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
+    const completeTodo = (id: string) => {
+        // @ts-ignore
+        let updatedTodos = todos.map((todo:Todos) => {
             if (todo.id === id) {
                 todo.isComplete = !todo.isComplete;
             }
