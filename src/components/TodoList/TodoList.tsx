@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import TodoForm from "../TodoForm/TodoForm";
 import Todo from "../Todo/Todo";
 import {Todos} from "../../models/Todos"
-
+import CrudContext from "../../context";
 
 
 function TodoList() {
-    const [todos, setTodos] = useState<any>([]);
+    // const [todos, setTodos] = useState<any>([]);
+
+    const {todos, setTodos} = useContext(CrudContext);
 
     const addTodo = (todo:Todos) => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
