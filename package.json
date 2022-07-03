@@ -45,6 +45,9 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.14",
+    "autoprefixer-core": "^6.0.1",
+    "cssnext": "^1.8.5",
+    "grunt-postcss": "^0.9.0",
     "typescript": "^4.7.4"
   }
 }

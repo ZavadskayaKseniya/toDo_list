@@ -1,17 +1,9 @@
 import React from 'react';
-import './components/styles/App.css';
+import './components/styles/App.sass';
 import TodoList from "./components/TodoList/TodoList";
 
 
 
-
-type AppState = {
-
-}
-
-type AppProp= {
-
-}
 
 function App() {
     return (

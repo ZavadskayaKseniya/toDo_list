@@ -1,5 +1,5 @@
 import React, { useState,  useRef } from 'react';
-import '../styles/TodoForm.css';
+import '../styles/TodoForm.sass';
 import Button from "../Button/Button";
 
 function TodoForm(props) {

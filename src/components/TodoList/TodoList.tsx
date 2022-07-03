@@ -14,16 +14,17 @@ function TodoList() {
         const newTodos = [todo, ...todos];
 
         setTodos(newTodos);
-        console.log(...todos);
+
     };
 
 
 
     const removeTodo = id => {
-        const removedArr = [...todos].filter(todo => todo.id !== id);
+         const removedArr = [...todos].filter(todo => todo.id !== id);
 
         setTodos(removedArr);
     };
+
 
     const completeTodo = id => {
         let updatedTodos = todos.map(todo => {
