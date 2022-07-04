@@ -1,3 +1,6 @@
+@import './colors.modules';
+
+
 .todo-form {
   margin-bottom: 32px;
 }
@@ -9,7 +12,7 @@
   outline: none;
   width: 320px;
   background: transparent;
-  color: #fff;
+  color: $title-color;
 }
 
 .todo-input::placeholder {
@@ -26,6 +29,6 @@
   background: black;
 
 
-  color: #fff;
+  color: $title-color;
   text-transform: capitalize;
 }

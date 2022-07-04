@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "ts:css" : " tcm -s -c -p src/**/*.module.scss "
   },
   "eslintConfig": {
     "extends": [

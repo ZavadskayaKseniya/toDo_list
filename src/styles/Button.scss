@@ -1,10 +1,12 @@
+@import './colors.modules';
+
 .todo-button {
   padding: 16px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: black;
-  color: #fff;
+  background: $button-color;
+  color: $title-color;
   text-transform: capitalize;
   }
