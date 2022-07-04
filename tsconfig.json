@@ -36,8 +36,7 @@
       "@api": ["./api/Api.service.ts"],
       "@services/*": ["services/*"]
     },
-    "outDir": "./dist",
-    "rootDir": "./src",
+
     "jsx": "react-jsx",
   },
   "include": [
