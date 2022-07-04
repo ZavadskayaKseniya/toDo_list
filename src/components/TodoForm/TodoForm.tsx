@@ -1,5 +1,5 @@
 import React, { useState,  useRef } from 'react';
-import '../styles/TodoForm.sass';
+import '../../styles/TodoForm.scss';
 import Button from "../Button/Button";
 
 

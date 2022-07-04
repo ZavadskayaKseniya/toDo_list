@@ -5,11 +5,13 @@ body {
 
 .todo {
   margin-bottom: 1rem;
-}
+  }
+
 
 .todo.completed span {
   text-decoration: line-through;
-}
+  }
+
 
 .todo label {
   width: 100%;
@@ -23,4 +25,5 @@ body {
 
 .todo i {
   z-index: 2;
-}
+  }
+

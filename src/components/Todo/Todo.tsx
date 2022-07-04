@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
-import '../styles/Todo.sass';
+import '../../styles/Todo.scss';
 import {Todos} from "../../models/Todos";
 
 
