@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "tsc:w": "tsc -w",
-    "ts:css" : " tcm -s -c -p src/**/*.module.scss "
+    "ts:css" : " tcm -s -c -p src/styles/colors.modules.scss "
   },
   "eslintConfig": {
     "extends": [
