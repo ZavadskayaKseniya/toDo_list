@@ -1,17 +1,18 @@
-import React, { useState,  useRef } from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import '../../styles/TodoForm.scss';
-import Button from "../Button/Button";
 import { v4 as uuid } from 'uuid';
+import { Button , Input} from '@mui/material';
 
 
 
 
 
 function TodoForm(props:any) {
-    const [input, setInput] = useState<string | number | readonly string[] | undefined>(props.edit ? props.edit.value : '');
-    const [todos, setTodos] = useState<any>([]);
+    const [input, setInput] = useState<string | undefined>(props.edit ? props.edit.value : '');
+    // const [todos, setTodos] = useState<any>([]);
 
     const inputRef = useRef(null);
+
 
 
 
@@ -27,14 +28,16 @@ function TodoForm(props:any) {
             text: input
         });
         setInput('');
-        console.log(todos.id);
+
     };
 
     return (
         <form onSubmit={handleSubmit} className='todo-form'>
 
                 <>
-                    <input
+
+                    <Input
+
                         placeholder='Add a new task'
                         value={input}
                         onChange={handleChange}
@@ -42,9 +45,10 @@ function TodoForm(props:any) {
                         className='todo-input'
                         ref={inputRef}
                     />
-                    <button onClick={handleSubmit} className='todo-button'>
+                    <Button  size="large" variant="outlined" onClick={handleSubmit} className='todo-button'>
                         Add todo
-                    </button>
+                    </Button>
+
                     {/*<Button onClick={handleSubmit} />*/}
                 </>
 

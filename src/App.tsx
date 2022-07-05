@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles/App.scss';
 import TodoList from "./components/TodoList/TodoList";
 import Context from "./context/context";
@@ -10,6 +10,14 @@ function App() {
 
     const [todos, setTodos] = useState<any>([]);
 
+    useEffect(()=>{
+        localStorage.setItem('todos', JSON.stringify('todos'))
+    }, [])
+
+    useEffect(()=>{
+        // const raw= localStorage.getItem('todos')||[]
+        // setTodos(JSON.parse(raw))
+    },[])
 
     const addTodo = (todo:Todos) => {
 
