@@ -6,19 +6,19 @@
 }
 
 .todo-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border: 1.5px solid black;
-  outline: none;
-  width: 320px;
-  background: transparent;
-  color: $title-color;
-}
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 1.5px solid black;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: $title-color;
 
-.todo-input::placeholder {
-  color: rgba(226, 226, 226, 0.58);
-}
 
+    &::placeholder {
+      color: rgba(226, 226, 226, 0.58);
+    }
+}
 
 .todo-button {
   padding: 16px;
