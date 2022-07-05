@@ -1,6 +1,9 @@
 import React, { useState,  useRef } from 'react';
 import '../../styles/TodoForm.scss';
 import Button from "../Button/Button";
+import { v4 as uuid } from 'uuid';
+
+
 
 
 
@@ -20,10 +23,11 @@ function TodoForm(props:any) {
         e.preventDefault();
 
         props.onSubmit({
-            id: Math.floor(Math.random() * 10000),
+            id: uuid(),
             text: input
         });
         setInput('');
+        console.log(todos.id);
     };
 
     return (
