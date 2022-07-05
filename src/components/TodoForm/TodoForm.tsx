@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 
 function TodoForm(props:any) {
     const [input, setInput] = useState<string | number | readonly string[] | undefined>(props.edit ? props.edit.value : '');
+    const [todos, setTodos] = useState<any>([]);
 
     const inputRef = useRef(null);
 
