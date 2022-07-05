@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import '../../styles/Todo.scss';
-import {Todos} from "../../models/Todos";
+import Todos from "../../models/Todos";
 
 
 const Todo = ( {todos, completeTodo, removeTodo }:{todos:any, completeTodo:any, removeTodo:any}) => {
