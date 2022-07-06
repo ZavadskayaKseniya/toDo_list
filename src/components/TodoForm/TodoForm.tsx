@@ -1,6 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
 import '../../styles/TodoForm.scss';
-import { v4 as uuid } from 'uuid';
 import { Button , Input} from '@mui/material';
 
 
@@ -24,7 +23,7 @@ function TodoForm(props:any) {
         e.preventDefault();
 
         props.onSubmit({
-            id: uuid(),
+            // id: uuid(),
             text: input
         });
         setInput('');
