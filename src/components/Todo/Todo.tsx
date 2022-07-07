@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import '../../styles/Todo.scss';
-import Todos from "../../models/Todos";
+import {Todos} from "../../models/Todos";
 import Context from '../../context/context'
 
 

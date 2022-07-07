@@ -1,4 +1,4 @@
-import Todos from "./models/Todos";
+import {Todos} from "./models/Todos";
 
 export default class CRUD {
     todos: Todos[];
