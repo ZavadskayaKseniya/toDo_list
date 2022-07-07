@@ -1,13 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, {useContext, useState} from 'react';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import '../../styles/Todo.scss';
 import {Todos} from "../../models/Todos";
-import CrudContext from "../../context";
+import Context from '../../context/context'
 
 
-const Todo = ( todos:Todos[] ) => {
+const Todo = ( ) => {
 
-    const { completeTodo,removeTodo} = useContext(CrudContext);
+    const {completeTodo, removeTodo ,todos} = useContext(Context);
 
     return todos.map((todo:Todos, index:number) => (
 
