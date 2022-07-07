@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import './styles/App.scss';
 import TodoList from "./components/TodoList/TodoList";
 import Context from "./context/context";
 import Todos from "./models/Todos";
+import CRUD from "./CRUD";
 
 
 
@@ -19,51 +20,13 @@ function App() {
         // setTodos(JSON.parse(raw))
     },[])
 
-    const addTodo = (todo:Todos) => {
-
-        if (!todo.text || /^\s*$/.test(todo.text)) {
-            return ;
-        }
-
-        // @ts-ignore
-        const newTodos = [todo, ...todos];
 
 
-        setTodos(newTodos);
 
-    };
-
-
-    const removeTodo = (id: string) => {
-
-        const removedArr = [...todos].filter(todo => todo.id !== id);
-
-        setTodos(removedArr);
-    };
-
-
-    const completeTodo = (id: string) => {
-
-        let updatedTodos = todos.map((todo:Todos) => {
-            if (todo.id === id) {
-                todo.isComplete = !todo.isComplete;
-            }
-            return todo;
-        });
-        setTodos(updatedTodos);
-    };
-
-
-    const value ={
-        addTodo,
-        removeTodo,
-        completeTodo,
-        todos,
-        setTodos
-    }
+   const useCrud = new CRUD(todos,setTodos);
 
     return (
-        <Context.Provider value={value}>
+        <Context.Provider value={useCrud}>
             <div className='todo-app'>
             <TodoList/>
             </div>
