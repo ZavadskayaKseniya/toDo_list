@@ -1,47 +1,48 @@
-import {Todos} from "./models/Todos";
+import Todos from "./models/Todos";
 
 export default class CRUD {
-    todos: Todos[];
-    setTodos : any;
+  todos: Todos[];
+  
+  setTodos : any;
 
-    constructor(todos: Todos[], setTodos: any) {
-        this.todos = todos;
-        this.setTodos = setTodos;
+  constructor(todos: Todos[], setTodos: any) {
+    this.todos = todos;
+    this.setTodos = setTodos;
+  }
+
+  addTodo(todo:Todos) {
+
+    if (!todo.text || /^\s*$/.test(todo.text)) {
+      return ;
     }
 
-    addTodo(todo:Todos) {
-
-        if (!todo.text || /^\s*$/.test(todo.text)) {
-            return ;
-        }
-
-        // @ts-ignore
-        const newTodos = [todo, ...todos];
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    const newTodos = [todo, ...(this.todos)];
 
 
-        this.setTodos(newTodos);
+    this.setTodos(newTodos);
 
-    };
-
-
-    removeTodo (id: string) {
-
-        const removedArr = [...this.todos].filter(todo => todo.id !== id);
-
-        this.setTodos(removedArr);
-    };
+  };
 
 
-    completeTodo (id: string) {
+  removeTodo (id: string) {
 
-        let updatedTodos = this.todos.map((todo:Todos) => {
-            if (todo.id === id) {
-                todo.isComplete = !todo.isComplete;
-            }
-            return todo;
-        });
-        this.setTodos(updatedTodos);
-    };
+    const removedArr = [...this.todos].filter(todo => todo.id !== id);
+
+    this.setTodos(removedArr);
+  };
+
+
+  completeTodo (id: string) {
+
+    const updatedTodos = this.todos.map((todo:Todos) => {
+      if (todo.id === id) {
+        todo.isComplete = !todo.isComplete;
+      }
+      return todo;
+    });
+    this.setTodos(updatedTodos);
+  };
 
 }
 

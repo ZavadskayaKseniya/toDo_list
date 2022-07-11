@@ -9,7 +9,7 @@ import CRUD from "./CRUD";
 
 function App() {
 
-    const [todos, setTodos] = useState<any>([]);
+    const [todos, setTodos] = useState<Todos[]>([]);
 
     useEffect(()=>{
         localStorage.setItem('todos', JSON.stringify('todos'))
