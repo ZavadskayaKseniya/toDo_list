@@ -10,8 +10,10 @@ body {
   margin-bottom: 1rem;
 
 
+
     &_completed span {
       text-decoration: line-through;
+
     }
 
 
@@ -27,6 +29,7 @@ body {
 
      &_i {
       z-index: 2;
+
     }
 }
 

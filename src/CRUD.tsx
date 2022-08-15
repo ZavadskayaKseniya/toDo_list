@@ -1,4 +1,4 @@
-import {Todos} from "./models/Todos";
+import Todos from "./models/Todos";
 
 export default class CRUD {
     todos: Todos[];
@@ -9,17 +9,10 @@ export default class CRUD {
         this.setTodos = setTodos;
     }
 
-    addTodo(todo:Todos) {
+    addTodo(text:string) {
 
-        if (!todo.text || /^\s*$/.test(todo.text)) {
-            return ;
-        }
-
-        // @ts-ignore
-        const newTodos = [todo, ...todos];
-
-
-        this.setTodos(newTodos);
+        const newTodo = new Todos(text);
+        this.setTodos([...this.todos, newTodo])
 
     };
 

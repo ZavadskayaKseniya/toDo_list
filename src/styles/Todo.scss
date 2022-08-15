@@ -12,6 +12,14 @@
   border-radius: 5px;
   width: 90%;
 }
+.todo-row__text{
+  cursor: pointer;
+}
+
+.todo-row__text:hover{
+  color: black;
+}
+
 
 .delete-icon {
   margin-right: 5px;
